@@ -1,4 +1,3 @@
-
 int ena = 6;
 int enb = 3;
 int in1 = 7;
@@ -12,9 +11,13 @@ int fanSpeed = 255;
 int motorSpeed = 255;
 int sensorThreshold = 32;
 
+    
+
 
 void setup() {
   // put your setup code here, to run once:
+
+  Serial.begin(9600);
   pinMode(ena, OUTPUT);
   pinMode(enb,OUTPUT);
   pinMode(in1,OUTPUT);
@@ -48,6 +51,7 @@ void loop() {
       buzz = 1;
     } 
   }
+
   if(buzz){
     digitalWrite(buzzer,HIGH);
     delay(200);
